@@ -56,8 +56,9 @@ class DetailsFragment : BottomSheetDialogFragment(R.layout.fragment_details) {
         binding.accType.setText(currAccount.accountName)
         binding.accUserEmail.setText(currAccount.userNameOrEmail)
 
+        Log.e("DETAILS_FRAGMENT","encrypted Pass -> ${currAccount.encryptedPassword}")
         decryptedPass = aes.decrypt(currAccount.encryptedPassword)
-
+        encryptedPass = currAccount.encryptedPassword
         binding.accPassword.setText(decryptedPass)
 
         binding.accType.isEnabled = false
@@ -101,12 +102,16 @@ class DetailsFragment : BottomSheetDialogFragment(R.layout.fragment_details) {
                 Toast.makeText(context,"Fields are Empty!", Toast.LENGTH_SHORT).show()
                 return
             }
+            val ePass : String?
             // means we do some changes in the current password
-            if(accPass != decryptedPass) encryptedPass = aes.encrypt(accPass)
-            else encryptedPass = accPass
+            if(accPass != decryptedPass) ePass = aes.encrypt(accPass)
+            else ePass = encryptedPass
 
+            Log.e("DETAILS_FRAGMENT","error first")
             val updatedAccount =
-                encryptedPass?.let { Account(currAccount.id,accType,accUserAndEmail, it) }
+                ePass?.let { Account(currAccount.id,accType,accUserAndEmail, it) }
+
+            Log.e("DETAILS_FRAGMENT","error second")
             context?.let {
                 if (updatedAccount != null) {
                     viewModel.update(it,updatedAccount)

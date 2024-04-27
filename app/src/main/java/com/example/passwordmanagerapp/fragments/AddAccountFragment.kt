@@ -1,6 +1,7 @@
 package com.example.passwordmanagerapp.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -60,6 +61,7 @@ class AddAccountFragment : BottomSheetDialogFragment(R.layout.fragment_add_accou
 
         val encryptedPass = aes.encrypt(password)
         val account = encryptedPass?.let { Account(0,accountName,userNameOrEmail, it) }
+        Log.e("ADD_FRAGMENT","Encrypted password -> ${account?.encryptedPassword}")
         context?.let {
             if (account != null) {
                 viewModel.insert(it,account)
