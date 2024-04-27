@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Password Manager</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google">Google</string>
+    <string name="star">*******</string>
+    <string name="account_name">Account Name</string>
+    <string name="username_email">Username/ Email</string>
+    <string name="password">Password</string>
+    <string name="add_new_account">Add New Account</string>
+    <string name="account_details">Account Details</string>
+    <string name="account_type">Account Type</string>
+    <string name="amitshah165_maill_com">Amitshah165@maill.com</string>
+    <string name="facebook">Facebook</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.passwordmanagerapp.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_addAccountFragment"
+            app:destination="@id/addAccountFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/addAccountFragment"
+        android:name="com.example.passwordmanagerapp.fragments.AddAccountFragment"
+        android:label="fragment_add_account"
+        tools:layout="@layout/fragment_add_account" >
+        <action
+            android:id="@+id/action_addAccountFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/detailsFragment"
+        android:name="com.example.passwordmanagerapp.fragments.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="account"
+            app:nullable="true"
+            app:argType="com.example.passwordmanagerapp.models.Account"/>
+    </dialog>
+</navigation>

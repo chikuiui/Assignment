@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rounded_bottom_sheet"
+    tools:context=".fragments.DetailsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/bottom_sheet_grapple"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+            android:id="@+id/drag_handler"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="#3F7DE3"
+            android:textSize="21sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:textStyle="bold"
+            android:text="@string/account_details"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:textColor="@color/grey"
+            android:text="@string/account_type"
+            android:layout_marginTop="30dp"
+            android:textSize="12sp"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/accType"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/facebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:textColor="@color/grey"
+            android:text="@string/username_email"
+            android:layout_marginTop="30dp"
+            android:textSize="12sp"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/accUserEmail"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/transparent"
+            android:text="@string/amitshah165_maill_com"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textColor="@color/grey"
+            android:text="@string/password"
+            android:layout_marginTop="30dp"
+            android:textSize="12sp"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+<!--            <TextView-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:text="@string/star"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--            <ImageView-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:src="@drawable/eye"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+            <com.google.android.material.textfield.TextInputLayout
+                app:endIconMode="password_toggle"
+                android:layout_width="match_parent"
+                app:hintEnabled="false"
+                android:layout_height="40dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/accPassword"
+                    android:layout_width="match_parent"
+                    android:background="@android:color/transparent"
+                    android:inputType="textPassword"
+                    tools:text="@string/star"
+                    android:paddingStart="2dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/editAndSave"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/edit"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@drawable/round_edit"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                android:text="@string/delete"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@drawable/round_delete"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

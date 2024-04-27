@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="titleTextColor">@style/MyTitleTextStyle</item>
+    </style>
+
+    <style name="MyTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="fab">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+
+
+    // FOr ROunded Bottom Sheet
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_bottom_sheet</item>
+    </style>
+</resources>
