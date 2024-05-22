@@ -1,7 +1,7 @@
 ## 1. Introduction
 
-This is a secure and user-friendly PaswordManager application.
-This application allow users to store and manage their passwords in a secure and organised manner.
+This is a secure and user-friendly Password Manager application.
+This application allow users to store and manage their passwords in a secure and organized manner.
 
 ## 2. Installation and Setup
 
